@@ -7,14 +7,14 @@ function Home() {
     const navigate = useNavigate()
     useEffect(() => {
         if(auth.currentUser == null || auth.currentUser.emailVerified == false){
-            navigate("/login");
+            navigate("/Authentication_React/login");
         }
     }, []);
 
     const logout = async () => {
         try{
             await signOut(auth);
-            navigate("/login");
+            navigate("/Authentication_React/login");
         }
         catch (err) {
             alert(err.message);

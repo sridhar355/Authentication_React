@@ -14,7 +14,7 @@ function Login() {
         try{
             await signInWithEmailAndPassword(auth, email, pass);
             alert("Login Success");
-            navigate("/")
+            navigate("/Authentication_React/home")
         } catch(err){
             alert(err.message);
         }
